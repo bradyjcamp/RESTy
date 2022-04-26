@@ -1,5 +1,9 @@
 # RESTy
 
+## URL
+
+![UML](/RESTy-UML.png)
+
 ## Lab Requirements
 
 Students will be creating and styling a Counter application. Look for the following attributes

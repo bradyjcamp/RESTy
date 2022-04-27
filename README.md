@@ -4,6 +4,10 @@
 
 ![UML](/RESTy-UML.png)
 
+## Deployed Link
+
+[RESTy](https://bradyjcamp.github.io/RESTy/)
+
 ## Lab Requirements
 
 Students will be creating and styling a Counter application. Look for the following attributes

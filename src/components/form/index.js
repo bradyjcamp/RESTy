@@ -1,8 +1,37 @@
 import React from 'react';
-
+import { useState } from 'react';
+import { useEffect } from 'react';
 import './form.scss';
 
 function Form(props) {
+
+
+  // useEffect(() => {
+  //   console.log('An event had occured!!');
+  // }); // this will run when any event happens
+
+  //didmount
+  // useEffect(() => {
+  //   console.log('I have mounted');
+  // }, []); //give an empty array to run once on mount
+
+  const [method, setMethod] = useState('');
+  const [urlInput, setUrlInput] = useState('');
+
+  // update
+  // useEffect(() => {
+  //   console.log('url has been updated')
+  // }, [urlInput]);
+
+  // unmount
+  // useEffect(() => {
+  //   return () => console.log('component unmounts')
+  // });
+
+  const handleMethod = e => {
+    e.preventDefault(e);
+    setMethod(e.target.id)
+  }
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -14,6 +43,7 @@ function Form(props) {
   };
 
   return (
+    // onClick={() => setUrlInput('new Url')}
     <>
       <form onSubmit={handleSubmit}>
         <label >

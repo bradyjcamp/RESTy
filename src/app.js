@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './app.scss';
 
@@ -15,6 +15,11 @@ function App() {
 
   let [data, setData] = useState({});
   let [requestParams, setRequestParams] = useState({});
+  
+  // useEffect(() => {
+  //   callApi(requestParams);
+  // }, [requestParams]);
+
 
   let callApi = async (requestParams) => {
     const response = await axios.get(requestParams.url);
@@ -26,6 +31,7 @@ function App() {
     });
     console.log(response.headers);
   };
+
 
   return (
     <React.Fragment>

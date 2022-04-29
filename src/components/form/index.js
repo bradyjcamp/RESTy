@@ -31,10 +31,10 @@ function Form(props) {
 
   return (
     <>
-      <form onSubmit={handleSubmit} id="api-form">
+      <form onSubmit={handleSubmit} data-testid="api-form">
         <label >
           <span>URL: </span>
-          <input onChange={handleUrl} name='url' type='text' />
+          <input onChange={handleUrl} data-testid="url-input" name='url' type='text' />
           <button type="submit">GO!</button>
         </label>
         <label className="methods">
